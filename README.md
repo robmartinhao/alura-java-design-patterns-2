@@ -1,1 +1,1 @@
-# alura-java-design-patterns-1
+# alura-java-design-patterns-2

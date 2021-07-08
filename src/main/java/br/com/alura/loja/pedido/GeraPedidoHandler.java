@@ -1,6 +1,8 @@
 package br.com.alura.loja.pedido;
 
 import br.com.alura.loja.orcamento.Orcamento;
+import br.com.alura.loja.pedido.acao.EnviarEmailPedido;
+import br.com.alura.loja.pedido.acao.SalvarPedidoNoBancoDeDados;
 
 import java.time.LocalDateTime;
 
@@ -10,7 +12,10 @@ public class GeraPedidoHandler {
         Orcamento orcamento = new Orcamento(dados.getValorOrcamento(), dados.getQuantidadeItens());
         Pedido pedido = new Pedido(dados.getCliente(), LocalDateTime.now(), orcamento);
 
-        System.out.println("Salvar pedido no Banco de Dados");
-        System.out.println("Enviar email com dados do novo pedido");
+        EnviarEmailPedido email = new EnviarEmailPedido();
+        SalvarPedidoNoBancoDeDados salvarBancoDados = new SalvarPedidoNoBancoDeDados();
+
+        email.executar(pedido);
+        salvarBancoDados.executar(pedido);
     }
 }

@@ -1,12 +1,9 @@
 package br.com.alura.loja;
 
-import br.com.alura.loja.orcamento.Orcamento;
 import br.com.alura.loja.pedido.GeraPedido;
 import br.com.alura.loja.pedido.GeraPedidoHandler;
-import br.com.alura.loja.pedido.Pedido;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 public class TestesPedidos {
 

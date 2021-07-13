@@ -19,6 +19,7 @@ public class TestesComposicao {
         novo.adicionarItem(antigo);
 
         System.out.println(novo.getValor());
+        System.out.println(novo.getValor());
 
     }
 }
